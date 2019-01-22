@@ -4,11 +4,11 @@
 	<parent>
 		<groupId>com.org.kk</groupId>
 		<artifactId>spring-pet-clinic</artifactId>
-		<version>0.0.1</version>
+		<version>0.0.2-SNAPSHOT</version>
 	</parent>
 	<groupId>com.org.kk</groupId>
 	<artifactId>spring-pet-data</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>spring-pet-data</name>
 	<url>http://maven.apache.org</url>
 	<properties>

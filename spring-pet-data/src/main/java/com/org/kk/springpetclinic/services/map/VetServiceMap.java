@@ -3,9 +3,9 @@ package com.org.kk.springpetclinic.services.map;
 import java.util.Set;
 
 import com.org.kk.springpetclinic.model.Vet;
-import com.org.kk.springpetclinic.services.CrudService;
+import com.org.kk.springpetclinic.services.VetService;
 
-public class VetServiceMap extends AbstractMapClass<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapClass<Vet, Long> implements VetService {
 
 	@Override
 	public Vet save(Vet object) {

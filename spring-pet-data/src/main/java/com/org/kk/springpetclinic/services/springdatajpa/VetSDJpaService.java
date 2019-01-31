@@ -14,7 +14,7 @@ import com.org.kk.springpetclinic.services.VetService;
 @Profile("springdatajpa")
 public class VetSDJpaService implements VetService {
 
-	private VetRepository vetRepository;
+	private final VetRepository vetRepository;
 
 	public VetSDJpaService(VetRepository vetRepository) {
 

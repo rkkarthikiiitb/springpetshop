@@ -10,10 +10,12 @@ import com.org.kk.springpetclinic.model.Pet;
 import com.org.kk.springpetclinic.model.PetType;
 import com.org.kk.springpetclinic.model.Speciality;
 import com.org.kk.springpetclinic.model.Vet;
+import com.org.kk.springpetclinic.model.Visit;
 import com.org.kk.springpetclinic.services.OwnerService;
 import com.org.kk.springpetclinic.services.PetTypeService;
 import com.org.kk.springpetclinic.services.SpecialityService;
 import com.org.kk.springpetclinic.services.VetService;
+import com.org.kk.springpetclinic.services.VisitService;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -22,14 +24,16 @@ public class DataLoader implements CommandLineRunner {
 	private final VetService vetService;
 	private final PetTypeService petTypeService;
 	private final SpecialityService specialityService;
+	private final VisitService visitService;
 
 	public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-			SpecialityService specialityService) {
+			SpecialityService specialityService, VisitService visitService) {
 
 		this.ownerService = ownerService;
 		this.vetService = vetService;
 		this.petTypeService = petTypeService;
 		this.specialityService = specialityService;
+		this.visitService = visitService;
 	}
 
 	@Override
@@ -98,6 +102,14 @@ public class DataLoader implements CommandLineRunner {
 		owner2.getPets().add(donsPet);
 
 		ownerService.save(owner2);
+		
+		Visit catVisit = new Visit();
+		catVisit.setPet(mikesPet);
+		catVisit.setDate(LocalDate.now());
+		catVisit.setDescription("Regular Checkup");
+		
+		visitService.save(catVisit);
+		System.out.println("Loaded Visits...");
 
 		System.out.println("Loaded owners...");
 

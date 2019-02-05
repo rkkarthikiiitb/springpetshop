@@ -38,6 +38,7 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       - run: mvn install -DskipTests
+      - run: mvn dependency:go-offline -DexcludeArtifactIds:spring-pet-data
         
       # run tests!
       - run: mvn install

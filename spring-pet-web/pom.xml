@@ -24,6 +24,7 @@
 		<dependency>
 			<groupId>com.org.kk</groupId>
 			<artifactId>spring-pet-data</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

@@ -1,12 +1,8 @@
 package com.org.kk.springpetclinic.model;
 
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
-import com.org.kk.springpetclinic.model.Owner.OwnerBuilder;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,6 +21,12 @@ public class PetType extends BaseEntity {
 	
 	@Column(name="name")
 	private String petName;
+
+	@Override
+	public String toString() {
+		return petName;
+	}
+	
 
 
 }

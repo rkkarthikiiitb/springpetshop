@@ -10,7 +10,7 @@
 	</parent>
 	<artifactId>spring-pet-data</artifactId>
 	<name>spring-pet-data</name>
-	<version>LATEST</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<url>http://maven.apache.org</url>
 	<packaging>jar</packaging>
 	<properties>

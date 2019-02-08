@@ -1,5 +1,6 @@
 package com.org.kk.springpetclinic.services.map;
 
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.context.annotation.Profile;
@@ -77,6 +78,12 @@ public class OwnerServiceMap extends AbstractMapClass<Owner, Long> implements Ow
 
 		return null;
 
+	}
+
+	@Override
+	public List<Owner> findAllByLastNameLike(String lastName) {
+		
+		return null;
 	}
 
 }

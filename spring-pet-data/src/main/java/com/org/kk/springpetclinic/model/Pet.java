@@ -12,6 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import com.org.kk.springpetclinic.model.Owner.OwnerBuilder;
 
 import lombok.AllArgsConstructor;
@@ -34,6 +36,7 @@ public class Pet extends BaseEntity {
 	@ManyToOne
 	@JoinColumn(name = "owner_id")
 	private Owner owner;
+	@DateTimeFormat(pattern = "yyyy-mm-dd")
 	@Column(name = "birth_date")
 	private LocalDate birthDate;
 	@Column(name = "name")
